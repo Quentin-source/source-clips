@@ -5,9 +5,14 @@ import { SharedModule } from '../shared/shared.module';
 import { LoginComponent } from './login/login.component';
 import { RegisterComponent } from './register/register.component';
 import { ReactiveFormsModule } from '@angular/forms';
+import { InputComponent } from '../shared/input/input.component';
 
 @NgModule({
-  declarations: [AuthModalComponent, LoginComponent, RegisterComponent],
+  declarations: [
+    AuthModalComponent,
+    LoginComponent,
+    RegisterComponent,
+  ],
   imports: [CommonModule, SharedModule, ReactiveFormsModule],
   exports: [AuthModalComponent],
 })
