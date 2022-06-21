@@ -10,7 +10,7 @@
   <div class="bg-gradient absolute w-full h-full z-40 opacity-60"></div>
 
   <div class="w-full h-full absolute z-40">
-    <div class="cube"></div>
+  <div class="cube"></div>
     <div class="cube"></div>
     <div class="cube"></div>
     <div class="cube"></div>
@@ -262,6 +262,6 @@
       </div>
     </a>
   </div>
-  <app-auth-modal></app-auth-modal>
+  <app-auth-modal *ngIf="!(auth.isAuthenticated$ | async)"></app-auth-modal>
 </section>
 
