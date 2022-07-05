@@ -10,9 +10,21 @@ import { AlertComponent } from './alert/alert.component';
 // import { ModalService } from '../services/modal.service';
 
 @NgModule({
-  declarations: [ModalComponent, TabsContainerComponent, TabComponent, InputComponent, AlertComponent],
+  declarations: [
+    ModalComponent,
+    TabsContainerComponent,
+    TabComponent,
+    InputComponent,
+    AlertComponent,
+  ],
   imports: [CommonModule, ReactiveFormsModule, NgxMaskModule.forRoot()],
-  exports: [ModalComponent, TabsContainerComponent, TabComponent, InputComponent, AlertComponent],
+  exports: [
+    ModalComponent,
+    TabsContainerComponent,
+    TabComponent,
+    InputComponent,
+    AlertComponent,
+  ],
   // providers: [ModalService],
 })
 export class SharedModule {}

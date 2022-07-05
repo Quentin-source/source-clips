@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component } from '@angular/core';
 import { AuthService } from '../services/auth.service';
 import { ModalService } from '../services/modal.service';
 import { AngularFireAuth } from '@angular/fire/compat/auth';

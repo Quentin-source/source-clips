@@ -1,7 +1,6 @@
 <!-- Login Form -->
 <app-alert *ngIf="showAlert" [color]="alertColor">{{ alertMsg }} </app-alert>
 
-
 <form #loginForm="ngForm" (ngSubmit)="login()">
   <!-- Email -->
   <div class="mb-3">
@@ -14,12 +13,10 @@
       name="email"
       [(ngModel)]="credentials.email"
       required
-      pattern="[a-z0-9!#$%&'*+/=?^_`{|}~-]+(?:\.[a-z0-9!#$%&'*+/=?^_`{|}~-]+)*@(?:[a-z0-9](?:[a-z0-9-]*[a-z0-9])?\.)+[a-z0-9](?:[a-z0-9-]*[a-z0-9])?"
-    />
+      pattern="[a-z0-9!#$%&'*+/=?^_`{|}~-]+(?:\.[a-z0-9!#$%&'*+/=?^_`{|}~-]+)*@(?:[a-z0-9](?:[a-z0-9-]*[a-z0-9])?\.)+[a-z0-9](?:[a-z0-9-]*[a-z0-9])?" />
     <p
       *ngIf="email.errors && email.touched && email.dirty"
-      class="text-red-400"
-    >
+      class="text-red-400">
       Email is invalid
     </p>
   </div>
@@ -34,20 +31,17 @@
       name="password"
       [(ngModel)]="credentials.password"
       required
-      pattern="^(?=.*\d)(?=.*[a-z])(?=.*[A-Z])(?=.*[a-zA-Z]).{8,}$"
-    />
+      pattern="^(?=.*\d)(?=.*[a-z])(?=.*[A-Z])(?=.*[a-zA-Z]).{8,}$" />
     <p
       *ngIf="password.errors && password.touched && password.dirty"
-      class="text-red-400"
-    >
+      class="text-red-400">
       Password is invalid
     </p>
   </div>
   <button
     type="submit"
     class="block w-full bg-indigo-400 text-white py-1.5 px-3 rounded transition hover:bg-indigo-500 disabled:opacity-50 disabled:bg-indigo-500"
-    [disabled]="loginForm.invalid || inSubmission"
-  >
+    [disabled]="loginForm.invalid || inSubmission">
     Submit
   </button>
 </form>

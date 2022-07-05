@@ -21,14 +21,14 @@ export class ModalService {
   }
 
   unregister(id: string) {
-    this.modals = this.modals.filter((element) => element.id !== id);
+    this.modals = this.modals.filter(element => element.id !== id);
   }
 
   isModalOpen = (id: string): boolean =>
-    !!this.modals.find((modal) => modal.id === id)?.visible;
+    !!this.modals.find(modal => modal.id === id)?.visible;
 
   toggleModal(id: string) {
-    const isModalVisible = this.modals.find((modal) => modal.id === id);
+    const isModalVisible = this.modals.find(modal => modal.id === id);
     if (isModalVisible) {
       isModalVisible.visible = !isModalVisible.visible;
     }
