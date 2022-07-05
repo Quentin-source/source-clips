@@ -1,7 +1,8 @@
 import { Component } from '@angular/core';
 import { AuthService } from 'src/app/services/auth.service';
-import { FormGroup, FormControl, Validator, Validators } from '@angular/forms';
+import { FormGroup, FormControl, Validators } from '@angular/forms';
 import { IUser } from 'src/app/models/user.model';
+import {RegisterValidators} from "../validators/register-validators";
 
 @Component({
   selector: 'app-register',
@@ -38,7 +39,7 @@ export class RegisterComponent {
     password: this.password,
     confirmPassword: this.confirmPassword,
     phoneNumber: this.phoneNumber,
-  });
+  },[RegisterValidators.match('password', 'confirmPassword')]);
 
   showAlert = false;
   alertMsg = 'Please wait your account is being created.';
@@ -55,7 +56,7 @@ export class RegisterComponent {
     } catch (error) {
       console.error(error);
       this.showAlert = true;
-      this.alertMsg = 'An unexpected error occured, please try again later.';
+      this.alertMsg = 'An unexpected error occurred, please try again later.';
       this.alertColor = 'red';
       this.inSubmission = false;
       return;
