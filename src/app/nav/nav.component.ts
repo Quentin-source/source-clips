@@ -8,7 +8,7 @@ import { AngularFireAuth } from '@angular/fire/compat/auth';
   templateUrl: './nav.component.html',
   styleUrls: ['./nav.component.scss'],
 })
-export class NavComponent implements OnInit {
+export class NavComponent {
   constructor(
     public modal: ModalService,
     public auth: AuthService,
@@ -24,6 +24,4 @@ export class NavComponent implements OnInit {
     $event.preventDefault();
     await this.afAuth.signOut();
   }
-
-  ngOnInit(): void {}
 }
