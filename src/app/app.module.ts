@@ -16,7 +16,15 @@ import { UploadComponent } from './pages/upload/upload.component';
 import { ClipComponent } from './pages/clip/clip.component';
 
 @NgModule({
-  declarations: [AppComponent, NavComponent, HomeComponent, AboutComponent, ManageComponent, UploadComponent, ClipComponent],
+  declarations: [
+    AppComponent,
+    NavComponent,
+    HomeComponent,
+    AboutComponent,
+    ManageComponent,
+    UploadComponent,
+    ClipComponent,
+  ],
   imports: [
     BrowserModule,
     AppRoutingModule,
