@@ -16,6 +16,8 @@ export class AuthService {
   public isAuthenticated$: Observable<boolean>;
   public isAuthenticatedWithDelay$: Observable<boolean>;
 
+  private redirect = false;
+
   constructor(
     private auth: AngularFireAuth,
     private db: AngularFirestore,
@@ -33,7 +35,9 @@ export class AuthService {
         map(e => this.route.firstChild),
         switchMap(route => route?.data ?? of({}))
       )
-      .subscribe(console.log);
+      .subscribe(data => {
+        this.redirect = data.authOnly ?? false
+      });
   }
 
   async createUser(userData: IUser) {
@@ -60,7 +64,9 @@ export class AuthService {
     if ($event) {
       $event.preventDefault();
     }
-    await this.router.navigateByUrl('/');
+    if (this.redirect) {
+      await this.router.navigateByUrl('/');
+    }
     await this.auth.signOut();
   }
 }

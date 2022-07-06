@@ -27,7 +27,13 @@
             >
           </li>
           <li>
-            <a class="px-2" href="#">Upload</a>
+            <a
+              class="px-2"
+              routerLinkActive="text-indigo-400"
+              routerLink="/upload"
+              [routerLinkActiveOptions]="{ exact: true }"
+              >Upload</a
+            >
           </li>
           <li>
             <a class="px-2" href="#" (click)="auth.logout($event)">Logout</a>
