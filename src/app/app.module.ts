@@ -10,9 +10,7 @@ import { AngularFireAuthModule } from '@angular/fire/compat/auth';
 import { AngularFirestoreModule } from '@angular/fire/compat/firestore';
 import { HomeComponent } from './pages/home/home.component';
 import { AboutComponent } from './pages/about/about.component';
-import { ManageComponent } from './pages/manage/manage.component';
 import { VideoModule } from './video/video.module';
-import { UploadComponent } from './pages/upload/upload.component';
 import { ClipComponent } from './pages/clip/clip.component';
 import { NotFoundComponent } from './pages/not-found/not-found.component';
 
@@ -22,8 +20,6 @@ import { NotFoundComponent } from './pages/not-found/not-found.component';
     NavComponent,
     HomeComponent,
     AboutComponent,
-    ManageComponent,
-    UploadComponent,
     ClipComponent,
     NotFoundComponent,
   ],
