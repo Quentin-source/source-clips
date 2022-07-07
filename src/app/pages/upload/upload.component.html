@@ -5,7 +5,7 @@
 
     <!-- Upload Dropbox -->
     <div
-      *ngIf="!file; else videoEditorContainer"
+      *ngIf="!fileSelected; else videoEditorContainer"
       appEventBlocker
       (dragend)="isDragover = false"
       (dragover)="isDragover = true"
