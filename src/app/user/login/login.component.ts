@@ -31,7 +31,7 @@ export class LoginComponent {
     } catch (error) {
       console.error(error);
       this.showAlert = true;
-      this.alertMsg = 'An unexpected error occured, please try again later.';
+      this.alertMsg = 'An unexpected error occurred, please try again later.';
       this.alertColor = 'red';
       this.inSubmission = false;
       return;
