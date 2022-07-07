@@ -21,4 +21,5 @@ firebase.auth().onAuthStateChanged(() => {
       .bootstrapModule(AppModule)
       .catch(err => console.error(err));
   }
+  appInit = true;
 });
