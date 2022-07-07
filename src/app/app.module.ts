@@ -14,6 +14,7 @@ import { ManageComponent } from './pages/manage/manage.component';
 import { VideoModule } from './video/video.module';
 import { UploadComponent } from './pages/upload/upload.component';
 import { ClipComponent } from './pages/clip/clip.component';
+import { NotFoundComponent } from './pages/not-found/not-found.component';
 
 @NgModule({
   declarations: [
@@ -24,15 +25,16 @@ import { ClipComponent } from './pages/clip/clip.component';
     ManageComponent,
     UploadComponent,
     ClipComponent,
+    NotFoundComponent,
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule,
     UserModule,
     AngularFireModule.initializeApp(environment.firebase),
     AngularFireAuthModule,
     AngularFirestoreModule,
     VideoModule,
+    AppRoutingModule,
   ],
   providers: [],
   bootstrap: [AppComponent],

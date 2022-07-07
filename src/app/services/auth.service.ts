@@ -64,6 +64,7 @@ export class AuthService {
     if ($event) {
       $event.preventDefault();
     }
+
     if (this.redirect) {
       await this.router.navigateByUrl('/');
     }
