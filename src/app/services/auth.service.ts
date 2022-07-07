@@ -65,9 +65,10 @@ export class AuthService {
       $event.preventDefault();
     }
 
+    await this.auth.signOut();
+
     if (this.redirect) {
       await this.router.navigateByUrl('/');
     }
-    await this.auth.signOut();
   }
 }
